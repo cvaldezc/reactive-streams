@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: service-payments
+  r2dbc:
+    url: r2dbc:h2:mem:///testdb
+    username: sa
+    password:
+resilience4j:
+  circuitbreaker:
+    instances:
+      antifraud:
+        sliding-window-size: 10
+        failure-rate-threshold: 50.0
+        wait-duration-in-open-state: 2s
+        permitted-number-of-calls-in-half-open-state: 5
+        automatic-transition-from-open-to-half-open-enabled: true
+server:
+  http2:
+    enabled: true
