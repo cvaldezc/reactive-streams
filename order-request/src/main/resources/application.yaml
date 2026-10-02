@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: order-request
+  r2dbc:
+    url: r2dbc:h2:mem:///testdb
+    username: sa
+    password:
+app:
+  balance:
+    url: http://localhost:8080
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      myLegacy:
+        sliding-window-size: 3
+        failure-rate-threshold: 50.0
+        wait-duration-in-open-state: 2
+        permitted-number-of-calls-in-half-open-state: 3
+        automatic-transition-from-open-to-half-open-enabled: true
+
+server:
+  port: 8082
+
+logging:
+  level:
+    # 1. Registra las peticiones y respuestas a nivel de Spring WebFlux
+    org.springframework.web.reactive.function.client.WebClient: DEBUG
+
+    # 2. Registra el tráfico HTTP real, headers y bytes que viajan por la red
+    reactor.netty.http.client.HttpClient: DEBUG
