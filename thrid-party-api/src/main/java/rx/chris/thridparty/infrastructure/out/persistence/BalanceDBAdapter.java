@@ -1,4 +1,4 @@
-package rx.chris.thridparty.infraestructure.out.persistence;
+package rx.chris.thridparty.infrastructure.out.persistence;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

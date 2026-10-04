@@ -1,10 +1,10 @@
-package rx.chris.thridparty.infraestructure.in.rest;
+package rx.chris.thridparty.infrastructure.in.rest;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
-import rx.chris.thridparty.infraestructure.in.rest.dto.AnalyzeResponse;
+import rx.chris.thridparty.infrastructure.in.rest.dto.AnalyzeResponse;
 import rx.chris.thridparty.application.port.in.AnalyzeUseCase;
 
 @RestController

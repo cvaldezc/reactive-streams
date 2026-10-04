@@ -1,4 +1,4 @@
-package rx.chris.thridparty.infraestructure.in.rest.dto;
+package rx.chris.thridparty.infrastructure.in.rest.dto;
 
 import java.math.BigDecimal;
 

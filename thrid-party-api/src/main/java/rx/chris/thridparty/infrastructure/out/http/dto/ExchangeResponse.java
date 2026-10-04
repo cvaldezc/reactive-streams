@@ -1,4 +1,4 @@
-package rx.chris.thridparty.infraestructure.out.http.dto;
+package rx.chris.thridparty.infrastructure.out.http.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

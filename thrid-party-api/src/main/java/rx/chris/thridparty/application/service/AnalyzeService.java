@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import rx.chris.thridparty.application.port.in.AnalyzeUseCase;
-import rx.chris.thridparty.infraestructure.in.rest.dto.AnalyzeResponse;
+import rx.chris.thridparty.infrastructure.in.rest.dto.AnalyzeResponse;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

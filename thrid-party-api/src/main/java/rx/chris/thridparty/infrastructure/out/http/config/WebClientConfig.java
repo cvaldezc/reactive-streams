@@ -1,4 +1,4 @@
-package rx.chris.thridparty.infraestructure.out.http.config;
+package rx.chris.thridparty.infrastructure.out.http.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

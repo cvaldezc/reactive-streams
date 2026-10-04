@@ -1,4 +1,4 @@
-package rx.chris.thridparty.infraestructure.out.http;
+package rx.chris.thridparty.infrastructure.out.http;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
@@ -8,8 +8,8 @@ import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 import rx.chris.thridparty.application.port.out.ExchangeRatePort;
 import rx.chris.thridparty.domain.ExchangeRate;
-import rx.chris.thridparty.infraestructure.out.http.dto.ExchangeResponse;
-import rx.chris.thridparty.infraestructure.out.http.mapper.HttpMapper;
+import rx.chris.thridparty.infrastructure.out.http.dto.ExchangeResponse;
+import rx.chris.thridparty.infrastructure.out.http.mapper.HttpMapper;
 
 import java.net.URI;
 
