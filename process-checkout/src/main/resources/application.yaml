@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: process-checkout
+  r2dbc:
+    url: r2dbc:h2:mem:///testdb?DELAY_CLOSED=-1
+    username: sa
+    password:
+
+app:
+  invetory:
+    url: http://localhost:9080
+  user-legacy:
+    url: http://localhost:9080
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      userlegacy:
+        sliding-window-size: 5
+        wait-duration-in-open-state: 3s
+        failure-rate-threshold: 40.0
+        permitted-number-of-calls-in-half-open-state: 3
+        automatic-transition-from-open-to-half-open-enabled: true
