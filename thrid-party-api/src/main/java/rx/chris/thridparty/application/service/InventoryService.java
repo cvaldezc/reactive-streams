@@ -5,7 +5,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 import rx.chris.thridparty.application.port.in.InventoryUseCase;
+import rx.chris.thridparty.domain.Reserve;
 import rx.chris.thridparty.infrastructure.in.rest.dto.InventoryResponse;
+import rx.chris.thridparty.infrastructure.in.rest.dto.ReserveRequest;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -27,5 +29,13 @@ public class InventoryService implements InventoryUseCase {
                 })
                 .delayElement(Duration.ofSeconds(random.nextInt(2)))
                 .doOnNext(response -> log.info("Getting inventory response: {}", response));
+    }
+
+    @Override
+    public Mono<Reserve> doReserve(ReserveRequest request) {
+        return Mono.fromCallable(random::nextBoolean)
+                .map(Reserve::new)
+                .delayElement(Duration.ofSeconds(random.nextInt(4)))
+                .doOnNext(response -> log.info("Reserve response: {}", response));
     }
 }
